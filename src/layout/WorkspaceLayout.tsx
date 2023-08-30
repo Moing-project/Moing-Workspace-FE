@@ -60,12 +60,12 @@ const StyledSection = styled.section<StyledSectionProps>`
     /* flex: 4; */
     transition: flex 0.3s ease-in-out;
 
-    main {
+    /* main {
       height: 100vh;
       display: flex;
       justify-content: center;
       padding-top: 20vh;
-    }
+    } */
   }
 `;
 
