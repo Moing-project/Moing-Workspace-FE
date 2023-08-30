@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function IssueDetail() {
-  return <div>IssueDetail</div>;
+  return <main>이슈디테일</main>;
 }
