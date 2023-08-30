@@ -65,46 +65,4 @@ export const ModalBody = styled.div`
   font-weight: 500;
   color: var(--gray-06);
   text-align: center;
-
-  h2 {
-    color: var(--font-main);
-    font-weight: 700;
-  }
-
-  section {
-    margin-top: 10px;
-
-    article {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 10px;
-
-      input {
-        border: none;
-        text-align: center;
-        font-weight: 600;
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      h3 {
-        position: absolute;
-        right: 0;
-        text-align: right;
-        color: #ff0000;
-        height: 20px;
-      }
-    }
-  }
-
-  & > div {
-    text-align: right;
-    color: var(--font-main);
-    margin-top: 16px;
-    font-size: 14px;
-  }
 `;

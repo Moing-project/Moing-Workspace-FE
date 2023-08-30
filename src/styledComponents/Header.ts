@@ -1,10 +1,12 @@
 import { styled } from "styled-components";
 
 export const HeaderLayout = styled.div`
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 56px;
   border-bottom: 1px solid var(--gray-03);
-  background: var(--white-100);
+  background: #fff;
 `;
 
 export const HeaderBox = styled.div`
