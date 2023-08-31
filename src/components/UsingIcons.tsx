@@ -16,6 +16,15 @@ import { ReactComponent as Chat } from "../assets/icons/chat.svg";
 
 import { ReactComponent as SideClose } from "../assets/icons/sideclose.svg";
 import { ReactComponent as SideOpen } from "../assets/icons/sideopen.svg";
+import { ReactComponent as Close } from "../assets/icons/close.svg";
+
+import { ReactComponent as Swipe } from "../assets/icons/swap.svg";
+import { ReactComponent as Members } from "../assets/icons/members.svg";
+import { ReactComponent as Setup } from "../assets/icons/setup.svg";
+
+import { ReactComponent as Main } from "../assets/icons/main.svg";
+import { ReactComponent as KanbanIcon } from "../assets/icons/kanban.svg";
+import { ReactComponent as IssueIcon } from "../assets/icons/issue.svg";
 
 export {
   Remove,
@@ -32,4 +41,11 @@ export {
   Chat,
   SideClose,
   SideOpen,
+  Close,
+  Swipe,
+  Members,
+  Setup,
+  Main,
+  IssueIcon,
+  KanbanIcon,
 };

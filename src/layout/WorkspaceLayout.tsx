@@ -29,27 +29,24 @@ interface StyledSectionProps {
 const StyledLayout = styled.div<StyledSectionProps>`
   display: flex;
 
-  aside {
+  & > aside {
     height: 100vh;
     position: sticky;
     top: 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    padding: 10vh 0;
+    /* padding: 10vh 0; */
     flex: ${({ $sidebarOpen }) => ($sidebarOpen ? "1" : "0")};
-    /* flex: 1; */
     background: var(--keyColor-02);
     transition: flex 0.3s ease-in-out;
   }
 
-  section {
+  & > section {
     flex: ${({ $sidebarOpen }) => ($sidebarOpen ? "5" : "6")};
-    /* flex: 4; */
     transition: flex 0.3s ease-in-out;
 
-    main {
-      margin-top: 57px;
+    & > main {
       overflow-y: scroll;
       height: calc(100vh - 57px); /* 높이 계산을 통해 콘텐츠 영역 제한 */
     }

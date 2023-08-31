@@ -9,30 +9,28 @@ export default function HeaderWithToken() {
 
   return (
     <S.HeaderLayout>
-      <S.HeaderWithTokenBox>
-        <div>
-          <Link to="">
-            <Logo />
-          </Link>
-          <SearchBox>
-            <Search />
-            <input
-              type="text"
-              placeholder="팀, 프로젝트, 워크스페이스 전체 검색"
-              style={{ width: "320px" }}
-            />
-          </SearchBox>
-        </div>
-        <nav>
-          <button>
-            <Alert />
-          </button>
-          <button>
-            <Chat />
-          </button>
-          <S.HeaderProfile></S.HeaderProfile>
-        </nav>
-      </S.HeaderWithTokenBox>
+      <div>
+        <Link to="">
+          <Logo />
+        </Link>
+        <SearchBox>
+          <Search />
+          <input
+            type="text"
+            placeholder="팀, 프로젝트, 워크스페이스 전체 검색"
+            style={{ width: "320px" }}
+          />
+        </SearchBox>
+      </div>
+      <nav>
+        <button>
+          <Alert />
+        </button>
+        <button>
+          <Chat />
+        </button>
+        <S.HeaderProfile></S.HeaderProfile>
+      </nav>
     </S.HeaderLayout>
   );
 }

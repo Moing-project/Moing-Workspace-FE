@@ -1,24 +1,17 @@
 import { styled } from "styled-components";
 
 export const HeaderLayout = styled.div`
-  position: fixed;
+  /* position: sticky; */
   top: 0;
-  width: 100%;
   height: 56px;
   border-bottom: 1px solid var(--gray-03);
   background: #fff;
-`;
-
-export const HeaderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
   padding-inline-start: 32px;
   padding-inline-end: 32px;
-`;
 
-export const HeaderWithTokenBox = styled(HeaderBox)`
   & > div {
     display: flex;
     align-items: center;
