@@ -52,7 +52,7 @@ export const ModalBody = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 16px;
+  /* margin-top: 16px; */
   position: relative;
   border-radius: 8px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
@@ -65,9 +65,10 @@ export const ModalBody = styled.div`
 `;
 
 export const IssueCreateModal = styled(ModalBody)`
+  box-sizing: border-box;
   width: 50vw;
   gap: 0;
-  height: 90vh;
+  /* height: 90vh; */
 
   header {
     display: flex;

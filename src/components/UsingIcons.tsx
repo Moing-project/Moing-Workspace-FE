@@ -25,6 +25,8 @@ import { ReactComponent as Setup } from "../assets/icons/setup.svg";
 import { ReactComponent as Main } from "../assets/icons/main.svg";
 import { ReactComponent as KanbanIcon } from "../assets/icons/kanban.svg";
 import { ReactComponent as IssueIcon } from "../assets/icons/issue.svg";
+import { ReactComponent as Calendar } from "../assets/icons/calendar.svg";
+import { ReactComponent as Note } from "../assets/icons/note.svg";
 
 import { ReactComponent as Lock } from "../assets/icons/lock.svg";
 import { ReactComponent as Bookmark } from "../assets/icons/bookmark.svg";
@@ -60,4 +62,6 @@ export {
   NoBookmark,
   Logout,
   User,
+  Calendar,
+  Note,
 };
