@@ -22,7 +22,7 @@ function App() {
       <>
         <Routes>
           <Route element={<WorkspaceLayout />}>
-            <Route path="" element={<Workspace />} />
+            <Route path="/" element={<Workspace />} />
             <Route path="/:id" element={<Workspace />} />
             <Route path="/:id/Kanban" element={<Kanban />} />
             <Route path="/:id/issue" element={<Issue />}>
