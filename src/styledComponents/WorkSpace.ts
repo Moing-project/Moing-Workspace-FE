@@ -35,9 +35,9 @@ export const ActiveWorkspace = styled.div`
 export const WorkspaceUl = styled.ul`
   box-sizing: border-box;
   width: 100%;
-  padding: 32px;
+  padding: 40px;
   display: grid;
-  gap: 32px;
+  gap: 40px;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 172px;
 `;
@@ -60,6 +60,7 @@ export const WorkspaceLi = styled.li`
     display: flex;
     gap: 12px;
     margin-top: 12px;
+    margin-bottom: 32px;
 
     figure {
       width: 48px;
@@ -71,6 +72,53 @@ export const WorkspaceLi = styled.li`
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+
+    p {
+      color: var(--01, #202020);
+
+      /* header/03 */
+      font-family: Pretendard Variable;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px; /* 125% */
+    }
+  }
+
+  .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      display: flex;
+
+      figure {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid var(--gray-01, #fff);
+        overflow: hidden;
+        position: relative;
+        margin-right: -10px; /* Adjust this value to control the overlap */
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: relative;
+          z-index: 0;
+        }
+
+        img + img {
+          position: absolute;
+          top: 0;
+          left: -20px; /* Adjust this value to control the overlap */
+          z-index: 1;
+        }
       }
     }
   }
