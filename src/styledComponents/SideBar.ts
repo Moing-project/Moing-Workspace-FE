@@ -1,10 +1,11 @@
 import { styled } from "styled-components";
 
-export const InitialSideBar = styled.div`
+export const StyledInitialSideBar = styled.div`
   padding: 10vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 40px;
 
   h1 {
     color: var(--01, #202020);
@@ -24,9 +25,81 @@ export const InitialSideBar = styled.div`
       line-height: 20px;
     }
   }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    figure {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      h2 {
+        color: var(--01, #202020);
+        text-align: center;
+        font-family: Pretendard Variable;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 17px; /* 121.429% */
+      }
+
+      p {
+        color: #9495a8;
+        text-align: center;
+
+        /* body/04 */
+        font-family: Pretendard Variable;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px; /* 120% */
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 32px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      cursor: pointer;
+    }
+
+    p {
+      color: var(--02, #9495a8);
+      text-align: center;
+      font-family: Pretendard Variable;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 12px; /* 120% */
+    }
+  }
 `;
 
-export const ActiveSideBar = styled.div`
+export const StyledActiveSideBar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,8 +155,6 @@ export const ActiveSideBar = styled.div`
       p {
         color: var(--02, #9495a8);
         text-align: center;
-
-        /* body/04 */
         font-family: Pretendard Variable;
         font-size: 10px;
         font-style: normal;

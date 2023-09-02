@@ -3,6 +3,8 @@ import styled from "styled-components";
 import HeaderWithToken from "./HeaderWithToken";
 import SideBar from "./SideBar";
 import { Outlet } from "react-router-dom";
+import Modal from "../components/Modal/Modal";
+import IssueModal from "../page/modals/IssueModal";
 
 export default function WorkspaceLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -11,14 +13,25 @@ export default function WorkspaceLayout() {
     setSidebarOpen((prev) => !prev);
   };
 
+  const [isIssueModalOpen, setIsIssueModalOpen] = useState<boolean>(false);
+
+  const handleSetIsIssueModalOpen = () => setIsIssueModalOpen(true);
+  const handleSetIsIssueModalClose = () => setIsIssueModalOpen(false);
+
   return (
-    <StyledLayout $sidebarOpen={sidebarOpen}>
-      <SideBar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
-      <section>
-        <HeaderWithToken />
-        <Outlet /> {/* 여기에 자식 라우트들이 렌더링됩니다 */}
-      </section>
-    </StyledLayout>
+    <>
+      <StyledLayout $sidebarOpen={sidebarOpen}>
+        <SideBar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
+        <section>
+          <HeaderWithToken />
+          <Outlet /> {/* 여기에 자식 라우트들이 렌더링됩니다 */}
+        </section>
+        <button onClick={handleSetIsIssueModalOpen}>모달 오픈!</button>
+      </StyledLayout>
+      <Modal isOpen={isIssueModalOpen} onClose={handleSetIsIssueModalClose}>
+        <IssueModal onClose={handleSetIsIssueModalClose} />
+      </Modal>
+    </>
   );
 }
 
@@ -28,6 +41,13 @@ interface StyledSectionProps {
 
 const StyledLayout = styled.div<StyledSectionProps>`
   display: flex;
+  position: relative;
+
+  & > button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
 
   & > aside {
     height: 100vh;

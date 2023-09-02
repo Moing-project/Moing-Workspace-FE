@@ -26,6 +26,13 @@ import { ReactComponent as Main } from "../assets/icons/main.svg";
 import { ReactComponent as KanbanIcon } from "../assets/icons/kanban.svg";
 import { ReactComponent as IssueIcon } from "../assets/icons/issue.svg";
 
+import { ReactComponent as Lock } from "../assets/icons/lock.svg";
+import { ReactComponent as Bookmark } from "../assets/icons/bookmark.svg";
+import { ReactComponent as NoBookmark } from "../assets/icons/nobookmark.svg";
+
+import { ReactComponent as Logout } from "../assets/icons/logout.svg";
+import { ReactComponent as User } from "../assets/icons/user.svg";
+
 export {
   Remove,
   Hide,
@@ -48,4 +55,9 @@ export {
   Main,
   IssueIcon,
   KanbanIcon,
+  Lock,
+  Bookmark,
+  NoBookmark,
+  Logout,
+  User,
 };

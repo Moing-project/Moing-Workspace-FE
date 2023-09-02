@@ -22,10 +22,11 @@ function App() {
     <>
       <Routes>
         <Route element={<WorkspaceLayout />}>
-          <Route index element={<Workspace />} />
-          <Route path="/Kanban" element={<Kanban />} />
-          <Route path="issue" element={<Issue />}>
-            <Route path="detail/:issueId" element={<IssueDetail />} />
+          <Route path="" element={<Workspace />} />
+          <Route path="/:id" element={<Workspace />} />
+          <Route path="/:id/Kanban" element={<Kanban />} />
+          <Route path="/:id/issue" element={<Issue />}>
+            {/* <Route path="/:id/detail/:issueId" element={<IssueDetail />} /> */}
           </Route>
           {/* 상단에 위치하는 라우트들의 규칙 중 일치하는 라우트가 없다면 아래가 화면에 나타남 */}
           <Route path="*" element={<NotFound />}></Route>
