@@ -9,7 +9,7 @@ import HeaderWithToken from './layout/HeaderWithToken';
 import SideBar from './layout/SideBar';
 import WorkspaceLayout from './layout/WorkspaceLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import * as ReactBootstrap from 'react-bootstrap';
+
 function App() {
   // const location = window.location;
   // const isMoingSpace = location.hostname.startsWith("moingspace");
