@@ -32,7 +32,7 @@ function App() {
           </Routes>
         </>
       );
-    } else window.location.href = "moingtool.com/login";
+    } else window.location.href = "www.moingtool.com/login";
   } else return null;
 }
 
