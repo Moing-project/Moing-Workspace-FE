@@ -35,6 +35,13 @@ import { ReactComponent as NoBookmark } from "../assets/icons/nobookmark.svg";
 import { ReactComponent as Logout } from "../assets/icons/logout.svg";
 import { ReactComponent as User } from "../assets/icons/user.svg";
 
+import { ReactComponent as Lock } from "../assets/icons/lock.svg";
+import { ReactComponent as Bookmark } from "../assets/icons/bookmark.svg";
+import { ReactComponent as NoBookmark } from "../assets/icons/nobookmark.svg";
+
+import { ReactComponent as Logout } from "../assets/icons/logout.svg";
+import { ReactComponent as User } from "../assets/icons/user.svg";
+
 export {
   Remove,
   Hide,
