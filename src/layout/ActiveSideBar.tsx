@@ -93,6 +93,14 @@ export default function ActiveSideBar() {
           <I.IssueIcon />
           이슈
         </button>
+        <button>
+          <I.Calendar />
+          캘린더
+        </button>
+        <button>
+          <I.Note />
+          회의록
+        </button>
       </nav>
     </StyledActiveSideBar>
   );
