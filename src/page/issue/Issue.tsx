@@ -159,88 +159,102 @@ export default function Issue() {
 
   return (
     <IssueLayoutMain>
-      <Table
-        style={{
-          width: '1000px',
-          height: '760px',
-          border: ' 1px solid',
-          borderColor: '#F6F6FE',
-          borderRadius: '15px',
-          overflow: 'hidden',
-          // borderRadius 해줬는데도 적용은 됐지만 안에가 넘쳐서 안 될 수 있음 그럴때 이 방법 ; overflow: 'hidden'
-        }}
-        hover
-        responsive
-      >
-        <tr>
-          <th style={headerCellStyle}>번호</th>
-          <th style={headerCellStyle}>진행상황</th>
-          <th style={headerCellStyle}>카테고리</th>
-          <th style={headerCellStyle}>제목</th>
-          <th style={headerCellStyle}>작성자</th>
-          <th style={headerCellStyle}>작성일</th>
-          <th style={headerCellStyle}>참여멤버</th>
-        </tr>
+      <CustomTable>
+        <Table
+          style={{
+            width: '1000px',
+            height: '760px',
+            // border: ' 1px solid',
+            // borderColor: '#F6F6FE',
+            // borderRadius: '15px',
+            // overflow: 'hidden',
+            // borderRadius 해줬는데도 적용은 됐지만 안에가 넘쳐서 안 될 수 있음 그럴때 이 방법 ; overflow: 'hidden'
+          }}
+          hover
+          responsive
+        >
+          <tr>
+            <th style={headerCellStyle}>번호</th>
+            <th style={headerCellStyle}>진행상황</th>
+            <th style={headerCellStyle}>카테고리</th>
+            <th style={headerCellStyle}>제목</th>
+            <th style={headerCellStyle}>작성자</th>
+            <th style={headerCellStyle}>작성일</th>
+            <th style={headerCellStyle}>참여멤버</th>
+          </tr>
 
-        <tbody>
-          {dummyIssues.map((issue, index) => (
-            <tr key={index}>
-              <td>{dummyIssues.length - 0 - index}</td>
-              <td>
-                <span
-                  style={{
-                    backgroundColor: statusToButtonMap[issue.status].color,
-                    padding: '4px 8px',
-                    borderRadius: '4px',
-                    color: 'white', // 텍스트 색상
-                  }}
-                >
-                  {statusToButtonMap[issue.status].text}
-                </span>
-              </td>
-              <td>
-                {['버그', '기타', '아이디어', '핫픽스'].includes(
-                  issue.category
-                ) ? (
-                  <StyledCategorySpan>{issue.category}</StyledCategorySpan>
-                ) : (
-                  issue.category
-                )}
-              </td>
-              <td style={{ width: '250px' }}>{issue.title}</td>
-              {/* 이 부분에서 너비 변경 */}
-              <td>{issue.nickname}</td>
-              <td>{issue.date}</td>
-              <td>
-                <TableCell>
-                  <ProfileImageWrapper>
-                    {issue.members.map((member, index) => (
-                      <ProfileImage
-                        src="https://ca.slack-edge.com/T03GJEFQ63V-U053YCQCREY-ge656e49aef8-512"
-                        alt="프로필 이미지"
-                        key={index}
-                        className="two-card-mg-top"
-                      />
-                    ))}
-                    <Badge>+{issue.members.length}</Badge>
-                  </ProfileImageWrapper>
-                </TableCell>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+          <tbody>
+            {dummyIssues.map((issue, index) => (
+              <tr key={index}>
+                <td>{dummyIssues.length - 0 - index}</td>
+                <td>
+                  <span
+                    style={{
+                      backgroundColor: statusToButtonMap[issue.status].color,
+                      padding: '4px 8px',
+                      borderRadius: '4px',
+                      color: 'white', // 텍스트 색상
+                    }}
+                  >
+                    {statusToButtonMap[issue.status].text}
+                  </span>
+                </td>
+                <td>
+                  {['버그', '기타', '아이디어', '핫픽스'].includes(
+                    issue.category
+                  ) ? (
+                    <StyledCategorySpan>{issue.category}</StyledCategorySpan>
+                  ) : (
+                    issue.category
+                  )}
+                </td>
+                <td style={{ width: '250px' }}>{issue.title}</td>
+                {/* 이 부분에서 너비 변경 */}
+                <td>{issue.nickname}</td>
+                <td>{issue.date}</td>
+                <td>
+                  <TableCell>
+                    <ProfileImageWrapper>
+                      {issue.members.map((member, index) => (
+                        <ProfileImage
+                          src="https://ca.slack-edge.com/T03GJEFQ63V-U053YCQCREY-ge656e49aef8-512"
+                          alt="프로필 이미지"
+                          key={index}
+                          className="two-card-mg-top"
+                        />
+                      ))}
+                      <Badge>+{issue.members.length}</Badge>
+                    </ProfileImageWrapper>
+                  </TableCell>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </CustomTable>
     </IssueLayoutMain>
   );
 }
+
+const CustomTable = styled.div`
+  margin-top: 5%;
+  width: 1000px;
+  height: 760px;
+  border-radius: 35px;
+  border: 1px solid #f6f6fe;
+  overflow: hidden;
+`;
 
 const IssueLayoutMain = styled.main`
   height: 100vh;
   width: auto;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   /* background: pink; */
   text-align: center;
+  /* border-radius: 35px;
+  border: 1px solid #8788e4; */
 `;
 
 // 프로필 이미지 스타일 컴포넌트
