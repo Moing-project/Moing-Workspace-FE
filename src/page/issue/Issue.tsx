@@ -159,6 +159,150 @@ export default function Issue() {
 
   return (
     <IssueLayoutMain>
+      <div>
+        <BtnGroup>
+          <div className="btn-group">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuClickableOutside"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="inside"
+              aria-expanded="false"
+              style={{
+                backgroundColor: 'white',
+                border: ' 1px solid gray/05',
+                color: 'black',
+              }} // 배경색 변경
+            >
+              작성기간
+            </button>
+            <ul
+              className="dropdown-menu"
+              aria-labelledby="dropdownMenuClickableOutside"
+            >
+              <li>
+                <a
+                  className="dropdown-item"
+                  href="http://localhost:3000/1/issue"
+                >
+                  1개월
+                </a>
+              </li>
+              <li>
+                <a
+                  className="dropdown-item"
+                  href="http://localhost:3000/1/issue"
+                >
+                  3개월
+                </a>
+              </li>
+              <li>
+                <a
+                  className="dropdown-item"
+                  href="http://localhost:3000/1/issue"
+                >
+                  6개월
+                </a>
+              </li>
+              <li>
+                <a
+                  className="dropdown-item"
+                  href="http://localhost:3000/1/issue"
+                >
+                  1년
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="btn-group">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuClickableOutside"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="inside"
+              aria-expanded="false"
+              style={{
+                backgroundColor: 'white',
+                border: ' 1px solid gray/05',
+                color: 'black',
+              }} // 배경색 변경
+            >
+              전체 진행상황
+            </button>
+            <ul
+              className="dropdown-menu"
+              aria-labelledby="dropdownMenuClickableOutside"
+            >
+              <li>
+                <a className="dropdown-item" href="#">
+                  대기
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  진행
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  완료
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  보류
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="btn-group">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuClickableOutside"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="inside"
+              aria-expanded="false"
+              style={{
+                backgroundColor: 'white',
+                border: ' 1px solid gray/05',
+                color: 'black',
+              }} // 배경색 변경
+            >
+              전체 카테고리
+            </button>
+            <ul
+              className="dropdown-menu"
+              aria-labelledby="dropdownMenuClickableOutside"
+            >
+              <li>
+                <a className="dropdown-item" href="#">
+                  버그
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  아이디어
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  핫픽스
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  기타
+                </a>
+              </li>
+            </ul>
+          </div>
+        </BtnGroup>
+      </div>
       <CustomTable>
         <Table
           style={{
@@ -236,11 +380,22 @@ export default function Issue() {
   );
 }
 
+const BtnGroup = styled.div`
+  /* margin-bottom: 20px; */
+  /* display: grid; */
+  display: flex;
+  gap: 30px;
+  /* color: white; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin-top: 20px; /* 원하는 간격으로 조정 */
+`;
+
 const CustomTable = styled.div`
-  margin-top: 5%;
+  margin-top: 100px;
   width: 1000px;
   height: 760px;
-  border-radius: 35px;
+  border-radius: 15px;
   border: 1px solid #f6f6fe;
   overflow: hidden;
 `;
@@ -249,10 +404,11 @@ const IssueLayoutMain = styled.main`
   height: 100vh;
   width: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* 자식 요소를 수직으로 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
   overflow: hidden;
-  /* background: pink; */
   text-align: center;
+  /* background: pink; */
   /* border-radius: 35px;
   border: 1px solid #8788e4; */
 `;
